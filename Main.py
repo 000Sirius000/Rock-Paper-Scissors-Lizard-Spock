@@ -32,3 +32,13 @@ class RPSLSGame:
         "важкий": 0.9,
         "неможливий": 1.0,
     }
+
+    def __init__(self, difficulty="легкий"):
+        """
+        Ініціалізує гру з обраним рівнем складності.
+        :param difficulty: один із рівнів: "легкий", "середній", "важкий", "неможливий"
+        """
+        self.moves = list(Move)
+        if difficulty not in self.DIFFICULTY_PROB:
+            raise ValueError("Невірний рівень складності!")
+        self.difficulty = difficulty
