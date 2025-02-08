@@ -24,3 +24,11 @@ class RPSLSGame:
         Move.LIZARD: [Move.SPOCK, Move.PAPER],
         Move.SPOCK: [Move.ROCK, Move.SCISSORS],
     }
+
+    # Ймовірність того, що комп'ютер "бачить" хід гравця залежно від складності
+    DIFFICULTY_PROB = {
+        "легкий": 0.0,
+        "середній": 0.5,
+        "важкий": 0.9,
+        "неможливий": 1.0,
+    }
