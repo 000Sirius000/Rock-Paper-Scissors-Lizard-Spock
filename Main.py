@@ -72,6 +72,18 @@ class RPSLSGame:
                 return random.choice(winning_moves)
         return random.choice(self.moves)
 
+    def determine_winner(self, player_move, computer_move):
+        """
+        Визначає переможця за правилами гри.
+        :return: None (якщо нічия), "player" (якщо виграв гравець) або "computer" (якщо виграв комп'ютер).
+        """
+        if player_move == computer_move:
+            return None
+        elif computer_move in self.WINNING_MOVES[player_move]:
+            return "player"
+        else:
+            return "computer"
+
     def play_round(self):
         """
         Провадить один раунд гри: отримує ходи, визначає переможця і виводить результат.
@@ -88,3 +100,4 @@ class RPSLSGame:
             print("Комп'ютер переміг!")
         print("-" * 40)
         return winner
+
