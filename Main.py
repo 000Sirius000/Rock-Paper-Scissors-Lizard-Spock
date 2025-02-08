@@ -101,18 +101,37 @@ class RPSLSGame:
         print("-" * 40)
         return winner
 
+    def choose_difficulty(self):
+        """
+        Дозволяє користувачу змінити рівень складності під час гри.
+        """
+        options = list(self.DIFFICULTY_PROB.keys())
+        while True:
+            new_diff = input(f"Виберіть рівень складності ({', '.join(options)}): ").strip().lower()
+            if new_diff in self.DIFFICULTY_PROB:
+                self.difficulty = new_diff
+                print(f"Рівень складності змінено на: {new_diff.capitalize()}")
+                break
+            else:
+                print("Невірний рівень складності. Спробуйте ще раз.")
+
     def play(self):
         """
-        Головний цикл гри. Після кожного раунду запитує, чи бажає гравець грати знову.
+        Головний цикл гри.
+        Після кожного раунду запитується, чи бажає гравець зіграти ще,
+        а також чи хоче змінити рівень складності.
         """
         print("Ласкаво просимо до гри 'Rock Paper Scissors Lizard Spock'!")
-        print(f"Рівень складності: {self.difficulty.capitalize()}")
+        print(f"Поточний рівень складності: {self.difficulty.capitalize()}")
         while True:
             self.play_round()
             play_again = input("Бажаєте зіграти ще? (y/n): ").strip().lower()
             if play_again != 'y':
                 print("Дякуємо за гру!")
                 break
+            change_diff = input("Бажаєте змінити рівень складності? (y/n): ").strip().lower()
+            if change_diff == 'y':
+                self.choose_difficulty()
 
 
 if __name__ == "__main__":
