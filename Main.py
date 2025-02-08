@@ -101,3 +101,26 @@ class RPSLSGame:
         print("-" * 40)
         return winner
 
+    def play(self):
+        """
+        Головний цикл гри. Після кожного раунду запитує, чи бажає гравець грати знову.
+        """
+        print("Ласкаво просимо до гри 'Rock Paper Scissors Lizard Spock'!")
+        print(f"Рівень складності: {self.difficulty.capitalize()}")
+        while True:
+            self.play_round()
+            play_again = input("Бажаєте зіграти ще? (y/n): ").strip().lower()
+            if play_again != 'y':
+                print("Дякуємо за гру!")
+                break
+
+
+if __name__ == "__main__":
+    # Налаштування аргументів командного рядка за допомогою argparse
+    parser = argparse.ArgumentParser(description="Гра Rock Paper Scissors Lizard Spock")
+    parser.add_argument("--difficulty", choices=["легкий", "середній", "важкий", "неможливий"], default="легкий",
+                        help="Встановити рівень складності: легкий, середній, важкий, неможливий")
+    args = parser.parse_args()
+
+    game = RPSLSGame(difficulty=args.difficulty)
+    game.play()
