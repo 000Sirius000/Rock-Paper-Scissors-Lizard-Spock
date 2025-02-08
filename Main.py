@@ -55,3 +55,19 @@ class RPSLSGame:
                     return move
             print("Невірний хід. Спробуйте ще раз.")
 
+    def get_computer_move(self, player_move):
+        """
+        Обирає хід для комп'ютера.
+        Залежно від рівня складності, комп'ютер може «бачити» хід гравця:
+          - Якщо випадкове число менше встановленої ймовірності,
+            комп'ютер обирає хід, що переможе хід гравця.
+          - Інакше комп'ютер обирає випадковий хід.
+        :param player_move: хід, зроблений гравцем.
+        """
+        chance_to_see = self.DIFFICULTY_PROB[self.difficulty]
+        if random.random() < chance_to_see:
+            # Комп'ютер бачить хід гравця – шукаємо хід, який переможе вибір гравця.
+            winning_moves = [move for move in self.moves if player_move in self.WINNING_MOVES[move]]
+            if winning_moves:
+                return random.choice(winning_moves)
+        return random.choice(self.moves)
