@@ -42,3 +42,16 @@ class RPSLSGame:
         if difficulty not in self.DIFFICULTY_PROB:
             raise ValueError("Невірний рівень складності!")
         self.difficulty = difficulty
+
+    def get_player_move(self):
+        """
+        Запитує хід гравця в циклі до отримання коректного введення.
+        """
+        valid_moves = [move.value for move in self.moves]
+        while True:
+            user_input = input(f"Введіть ваш хід ({', '.join(valid_moves)}): ").strip().lower()
+            for move in self.moves:
+                if user_input == move.value:
+                    return move
+            print("Невірний хід. Спробуйте ще раз.")
+
