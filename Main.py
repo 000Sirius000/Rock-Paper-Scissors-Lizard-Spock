@@ -71,3 +71,20 @@ class RPSLSGame:
             if winning_moves:
                 return random.choice(winning_moves)
         return random.choice(self.moves)
+
+    def play_round(self):
+        """
+        Провадить один раунд гри: отримує ходи, визначає переможця і виводить результат.
+        """
+        player_move = self.get_player_move()
+        computer_move = self.get_computer_move(player_move)
+        winner = self.determine_winner(player_move, computer_move)
+        print(f"\nВи обрали: {player_move.value.capitalize()}. Комп'ютер обрав: {computer_move.value.capitalize()}.")
+        if winner is None:
+            print("Нічия!")
+        elif winner == "player":
+            print("Ви перемогли!")
+        else:
+            print("Комп'ютер переміг!")
+        print("-" * 40)
+        return winner

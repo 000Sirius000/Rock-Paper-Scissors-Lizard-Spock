@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df64bbc4-8e59-446f-b3af-cbf81caf800f" name="Changes" comment="Add DIFFICULTY_PROB" />
+    <list default="true" id="df64bbc4-8e59-446f-b3af-cbf81caf800f" name="Changes" comment="Add def get_computer_move" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +97,31 @@
       <option name="project" value="LOCAL" />
       <updated>1739029065344</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add def __init__">
+      <option name="closed" value="true" />
+      <created>1739029333222</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739029333222</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add def get_player_move">
+      <option name="closed" value="true" />
+      <created>1739029444585</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739029444585</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add def get_computer_move">
+      <option name="closed" value="true" />
+      <created>1739029516484</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739029516484</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +140,9 @@
     <MESSAGE value="Add move class" />
     <MESSAGE value="Add class RPSLSGame" />
     <MESSAGE value="Add DIFFICULTY_PROB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add DIFFICULTY_PROB" />
+    <MESSAGE value="Add def __init__" />
+    <MESSAGE value="Add def get_player_move" />
+    <MESSAGE value="Add def get_computer_move" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add def get_computer_move" />
   </component>
 </project>
