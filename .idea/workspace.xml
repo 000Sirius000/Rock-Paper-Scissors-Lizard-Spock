@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df64bbc4-8e59-446f-b3af-cbf81caf800f" name="Changes" comment="Add Pytest">
+    <list default="true" id="df64bbc4-8e59-446f-b3af-cbf81caf800f" name="Changes" comment="Add text changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742221914306</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add text changes">
+      <option name="closed" value="true" />
+      <created>1742223385656</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742223385656</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,6 +213,7 @@
     <MESSAGE value="Add def play and main" />
     <MESSAGE value="Add def choose_difficulty and change def play" />
     <MESSAGE value="Add Pytest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Pytest" />
+    <MESSAGE value="Add text changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add text changes" />
   </component>
 </project>
